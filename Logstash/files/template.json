@@ -1,0 +1,39 @@
+{
+    "template": "*",
+    "mappings" : {
+      "_default_" : {
+        "properties" : {
+          "cs_uri_stem_string" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "referrer_string" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "cs_host_string" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "user_agent_string" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "cs_uri_full" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "geoip" : {
+            "properties" : {
+              "location" : {
+                "type" : "geo_point"
+              },
+              "coordinates" : {
+                "type" : "geo_point"
+              }
+            }
+        }
+      }
+    }
+  }
+}
