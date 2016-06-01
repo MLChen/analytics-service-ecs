@@ -11,4 +11,6 @@ sed -i -e "s,{grafana_domain},$GRAFANA_DOMAIN,g" /etc/grafana/grafana.ini
 echo "$GRAFANA_DB" | base64 --decode >> /etc/grafana/grafana.ini
 echo "$GRAFANA_SSO" | base64 --decode >> /etc/grafana/grafana.ini
 
-service grafana-server start && sleep infinity
+service grafana-server start
+
+sleep infinity
